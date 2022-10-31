@@ -76,11 +76,6 @@ export async function readReservation(id, signal) {
 
 export async function createReservation(data, signal) {
   const url = new URL(`${API_BASE_URL}/reservations`);
-  // const data = {
-  //   ...params,
-  //   ["people"]: Number(params.people),
-  //   // status: "booked",
-  // };
 
   return await fetchJson(
     url,
@@ -91,11 +86,6 @@ export async function createReservation(data, signal) {
 
 export async function updateReservation(data, reservation_id, signal) {
   const url = new URL(`${API_BASE_URL}/reservations/${reservation_id}`);
-  // const data = {
-  //   ...params,
-  //   ["people"]: Number(params.people),
-  //   // status: "booked",
-  // };
 
   return await fetchJson(
     url,
@@ -111,7 +101,6 @@ export async function listTables(signal) {
 
 export async function createTable(data, signal) {
   const url = new URL(`${API_BASE_URL}/tables`);
-  // const data = { ...params, ["capacity"]: Number(params.capacity) };
 
   return await fetchJson(
     url,
@@ -158,21 +147,6 @@ export async function updateTable(reservation_id, table_id, signal) {
   ];
 
   return await Promise.all(promises);
-
-  // return await fetchJson(
-  //   tableUrl,
-  //   {
-  //     headers,
-  //     signal,
-  //     method: "PUT",
-  //     body: JSON.stringify({
-  //       data: {
-  //         reservation_id,
-  //       },
-  //     }),
-  //   },
-  //   []
-  // );
 }
 
 export async function cancelReservation(reservation_id, signal) {

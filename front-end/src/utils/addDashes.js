@@ -1,3 +1,5 @@
+// Add dashed to phone numbers
+
 function addDashes(f) {
   f.value = f.value.split("-").join("");
   f.value = f.value.replace(/[^0-9-]/g, "");
