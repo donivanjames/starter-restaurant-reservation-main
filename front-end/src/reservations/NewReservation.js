@@ -4,7 +4,6 @@ import { createReservation } from "../utils/api";
 import addDashes from "../utils/addDashes";
 import ErrorAlert from "../layout/ErrorAlert";
 import Form from "../form/Form";
-// import { today } from "../utils/date-time";
 
 function NewReservation() {
   const history = useHistory();
