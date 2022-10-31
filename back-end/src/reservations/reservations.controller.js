@@ -217,8 +217,6 @@ module.exports = {
     asyncErrorBoundary(reservationExists),
     hasProperties(...REQUIRED_PROPERTIES),
     asyncErrorBoundary(validateProperties),
-    // asyncErrorBoundary(notFinished),
-    // asyncErrorBoundary(validStatus),
     asyncErrorBoundary(update),
   ],
   updateStatus: [

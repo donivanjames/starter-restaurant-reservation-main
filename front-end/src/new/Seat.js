@@ -30,14 +30,6 @@ function Seat() {
 
     const errors = [];
 
-    // **** Check of table capacity is sufficient
-
-    // if (tables[table].capacity < reservation.people) {
-    //   errors.push({
-    //     message: `Table ${table.table_name} does not have enough capacity to seat this reservation`,
-    //   });
-    // }
-
     setFormErrors(errors);
 
     // **** Seat table API Call
