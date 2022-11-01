@@ -59,7 +59,6 @@ function Dashboard({ date }) {
         <div className="row">
           <div className="col col-sm">
             <h4 className="mb-4 text-center">Reservations for: {date}</h4>
-            {/* <DateNavigation date={date} /> */}
             {reservationList}
           </div>
           <div className="col col-sm">
