@@ -32,6 +32,8 @@ function Dashboard({ date }) {
   }
 
   const reservationList = reservations.map((reservation) => {
+    console.log(reservation)
+
     if(reservation.status != 'seated'){
       return <Reservation
       loadDashboard={loadDashboard}
