@@ -31,13 +31,15 @@ function Dashboard({ date }) {
     return () => abortController.abort();
   }
 
-  const reservationList = reservations.map((reservation) => (
-    <Reservation
+  const reservationList = reservations.map((reservation) => {
+    if(reservation.status != 'seated'){
+      return <Reservation
       loadDashboard={loadDashboard}
       key={reservation.reservation_id}
       reservation={reservation}
     />
-  ));
+    }
+  });
 
   const tableList = tables.map((table) => (
     <Table loadDashboard={loadDashboard} key={table.table_id} table={table} />
