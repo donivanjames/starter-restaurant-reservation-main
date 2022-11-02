@@ -46,7 +46,7 @@ function Reservation({ reservation, loadDashboard }) {
       </div>
     );
   return (
-    <div className="card mb-3 shadow-sm">
+    <div className="card mb-3 shadow-sm w-75">
       <h5 className="card-header dark-green d-flex justify-content-between">
         <div>
           {first_name} {last_name}

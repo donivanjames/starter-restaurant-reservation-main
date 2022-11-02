@@ -32,14 +32,16 @@ function Dashboard({ date }) {
   }
 
   const reservationList = reservations.map((reservation) => {
-    console.log(reservation)
 
-    if(reservation.status != 'seated'){
-      return <Reservation
-      loadDashboard={loadDashboard}
-      key={reservation.reservation_id}
-      reservation={reservation}
-    />
+    if (reservation.status != "seated") {
+      return (
+        <Reservation
+          loadDashboard={loadDashboard}
+          key={reservation.reservation_id}
+          reservation={reservation}
+        />
+      );
+
     }
   });
 
@@ -49,19 +51,23 @@ function Dashboard({ date }) {
 
   return (
     <main>
-        <div className="headers">Dashboard</div>
-        <DateNavigation date={date} />
-      <ErrorAlert error={reservationsError} />
-      <ErrorAlert error={tablesError} />
-        <div className="row">
-          <div className="col col-sm">
-            <h4 className="mb-4">Reservations for: {date}</h4>
-            {reservationList}
-          </div>
-          <div className="col col-sm">
-            <h4 className="mb-4">Tables:</h4>
-            {tableList}
-          </div>
+      <div className="row">
+        <div className="col col-sm">
+          <div className="headers">Dashboard</div>
+          <h4 className="mb-4">Reservations for: {date}</h4>
+          <DateNavigation date={date} />
+          <ErrorAlert error={reservationsError} />
+          <ErrorAlert error={tablesError} />
+        </div>
+        <div className="col col-sm align-bottom">
+          <h2>Tables</h2>
+        </div>
+      </div>
+
+      <hr></hr>
+      <div className="row">
+        <div className="col col-sm">{reservationList}</div>
+        <div className="col col-sm">{tableList}</div>
       </div>
     </main>
   );
