@@ -1,4 +1,5 @@
 import { cancelReservation } from "../utils/api";
+import "../NewLayout.css";
 
 function Reservation({ reservation, loadDashboard }) {
   const {
@@ -28,50 +29,35 @@ function Reservation({ reservation, loadDashboard }) {
 
   const statusElement =
     status === "booked" ? (
-      <div
-        style={{ cursor: "default" }}
-        className="btn border border-success rounded text-success"
-      >
+      <div style={{ cursor: "default" }} className="btn rounded green-button">
         Booked
       </div>
     ) : status === "seated" ? (
-      <div
-        style={{ cursor: "default" }}
-        className="btn border border-warning rounded text-warning"
-      >
+      <div style={{ cursor: "default" }} className="btn  rounded red-button">
         Seated
       </div>
     ) : status === "cancelled" ? (
-      <div
-        style={{ cursor: "default" }}
-        className="btn border border-danger rounded text-danger"
-      >
+      <div style={{ cursor: "default" }} className="btn rounded red-button">
         Cancelled
       </div>
     ) : (
-      <div
-        style={{ cursor: "default" }}
-        className="btn border border-muted rounded text-muted"
-      >
+      <div style={{ cursor: "default" }} className="btn rounded green-button">
         Finished
       </div>
     );
   return (
-    <div
-      className="card mb-3 shadow-sm"
-      // style={{ height: "18rem" }}
-    >
-      <h5 className="card-header d-flex justify-content-between">
+    <div className="card mb-3 shadow-sm">
+      <h5 className="card-header dark-green d-flex justify-content-between">
         <div>
           {first_name} {last_name}
         </div>
-        <div className="text-muted d-flex justify-content-center">
+        <div className="d-flex justify-content-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
             height="16"
             fill="currentColor"
-            className="bi bi-clock align-self-center mr-2"
+            className="bi bi-clock align-self-center mr-2 light-text-replacer"
             style={{ marginTop: "1px" }}
             viewBox="0 0 16 16"
           >
@@ -81,7 +67,7 @@ function Reservation({ reservation, loadDashboard }) {
           {reservation_time}
         </div>
       </h5>
-      <div className="card-body">
+      <div className="card-body new-card-body">
         <div className="container">
           <div className="row">
             <p className="col col-8 card-text">
@@ -108,12 +94,23 @@ function Reservation({ reservation, loadDashboard }) {
               {statusElement}
             </div>
 
-            <div className="col col-8 card-text text-right d-flex justify-content-end pr-0">
+            <div className="col col-8 card-text text-right d-flex justify-content-end pr-0 ">
+              {status === "booked" && (
+                <a
+                  href={`/reservations/${reservation_id}/seat`}
+                  role="button"
+                  className="btn green-button mr-2"
+                >
+                  Seat
+                </a>
+              )}
               <a href={`/reservations/${reservation_id}/edit`}>
-                <button className="btn btn-secondary mr-2">Edit</button>
+                <button className="btn dark-green-button mr-2">
+                  Edit
+                </button>
               </a>
               <button
-                className="btn btn-danger"
+                className="btn red-button mr-2"
                 data-reservation-id-cancel={reservation.reservation_id}
                 onClick={handleClick}
               >
@@ -123,17 +120,17 @@ function Reservation({ reservation, loadDashboard }) {
           </div>
         </div>
       </div>
-      {status === "booked" && (
+      {/* {status === "booked" && (
         <a
           href={`/reservations/${reservation_id}/seat`}
           role="button"
-          className="card-footer bg-primary text-decoration-none"
+          className="card-footer green-button text-decoration-none"
         >
-          <h5 className="text-white text-center text-decoration-none mb-1">
+          <h5 className="text-center text-decoration-none mb-1">
             Seat
           </h5>
         </a>
-      )}
+      )} */}
     </div>
   );
 }

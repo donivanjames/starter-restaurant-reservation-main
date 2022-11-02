@@ -6,7 +6,7 @@ function DateNavigation({ date }) {
     <div className="btn-group" role="group">
       <Link
         type="button"
-        className="btn btn-secondary"
+        className="btn dark-green"
         to={(location) => {
           return `${location.pathname}?date=${previous(date)}`;
         }}
@@ -15,7 +15,7 @@ function DateNavigation({ date }) {
       </Link>
       <Link
         type="button"
-        className="btn btn-secondary"
+        className="btn dark-green"
         to={(location) => {
           return `${location.pathname}?date=${today()}`;
         }}
@@ -24,7 +24,7 @@ function DateNavigation({ date }) {
       </Link>
       <Link
         type="button"
-        className="btn btn-secondary"
+        className="btn dark-green"
         to={(location) => {
           return `${location.pathname}?date=${next(date)}`;
         }}

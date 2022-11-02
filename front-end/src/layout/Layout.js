@@ -2,7 +2,7 @@ import React from "react";
 import Menu from "./Menu";
 import Routes from "./Routes";
 
-import "./Layout.css";
+import "../NewLayout.css"
 
 /**
  * Defines the main layout of the application.
@@ -13,7 +13,7 @@ import "./Layout.css";
  */
 function Layout() {
   return (
-    <div className="container-fluid bg-light full-page">
+    <div className="container-fluid new-background full-page">
       <div className="row h-100">
         <div className="col-md-2 side-bar">
           <Menu />

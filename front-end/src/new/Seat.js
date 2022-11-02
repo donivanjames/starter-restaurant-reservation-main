@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useHistory, useParams } from "react-router-dom";
 import { listTables, updateTable } from "../utils/api";
 import ErrorAlert from "../layout/ErrorAlert";
+import "../NewLayout.css"
 
 function Seat() {
   const history = useHistory();
@@ -67,19 +68,19 @@ function Seat() {
             required
             onChange={handleChange}
             value={tableId}
-            className="form-control shadow-sm"
+            className="form-control shadow-sm text-field"
             name="table_id"
           >
             <option value="">-- Choose Table --</option>
             {tableList}
           </select>
-          <button className="btn btn-primary mx-2" type="submit">
+          <button className="btn dark-green mx-2" type="submit">
             Submit
           </button>
           <button
             onClick={history.goBack}
             type="button"
-            className="btn btn-secondary"
+            className="btn red-button"
           >
             Cancel
           </button>

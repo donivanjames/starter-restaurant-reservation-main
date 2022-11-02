@@ -3,6 +3,7 @@ import { listReservations } from "../utils/api";
 import addDashes from "../utils/addDashes";
 import ErrorAlert from "../layout/ErrorAlert";
 import Reservation from "../dashboard/Reservation";
+import "../NewLayout.css"
 
 function Search() {
   const initialFormState = {
@@ -82,13 +83,13 @@ function Search() {
           required
           type="tel"
           maxLength="12"
-          placeholder="Enter a customer's phone number"
+          placeholder="Enter phone number"
           onChange={handleChange}
           value={formData.mobile_number}
-          className="form-control shadow-sm"
+          className="form-control shadow-sm text-field"
           name="mobile_number"
         ></input>
-        <button className="btn btn-primary mx-2" type="submit">
+        <button className="btn dark-green mx-2" type="submit">
           Find
         </button>
       </form>

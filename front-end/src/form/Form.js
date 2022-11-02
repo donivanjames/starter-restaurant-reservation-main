@@ -1,4 +1,5 @@
 import { useHistory } from "react-router-dom";
+import "../NewLayout.css"
 
 function Form({ formData, handleChange, handleSubmit }) {
   const history = useHistory();
@@ -12,7 +13,7 @@ function Form({ formData, handleChange, handleSubmit }) {
             onChange={handleChange}
             value={formData.first_name}
             placeholder="First Name"
-            className="form-control shadow-sm"
+            className="form-control text-field"
             name="first_name"
           ></input>
           <input
@@ -21,7 +22,7 @@ function Form({ formData, handleChange, handleSubmit }) {
             onChange={handleChange}
             value={formData.last_name}
             placeholder="Last Name"
-            className="form-control shadow-sm"
+            className="form-control text-field"
             name="last_name"
           ></input>
         </div>
@@ -34,7 +35,7 @@ function Form({ formData, handleChange, handleSubmit }) {
             onChange={handleChange}
             value={formData.mobile_number}
             placeholder="Mobile Number"
-            className="form-control shadow-sm"
+            className="form-control text-field"
             name="mobile_number"
           ></input>
         </div>
@@ -45,7 +46,7 @@ function Form({ formData, handleChange, handleSubmit }) {
             onChange={handleChange}
             value={formData.reservation_date}
             placeholder="Reservation Date"
-            className="form-control shadow-sm"
+            className="form-control text-field"
             name="reservation_date"
           ></input>
         </div>{" "}
@@ -56,7 +57,7 @@ function Form({ formData, handleChange, handleSubmit }) {
             onChange={handleChange}
             value={formData.reservation_time}
             placeholder="Reservation Time"
-            className="form-control shadow-sm"
+            className="form-control text-field"
             name="reservation_time"
           ></input>
         </div>{" "}
@@ -68,17 +69,17 @@ function Form({ formData, handleChange, handleSubmit }) {
             onChange={handleChange}
             value={formData.people}
             placeholder="People"
-            className="form-control shadow-sm"
+            className="form-control text-field"
             name="people"
           ></input>
         </div>
-        <button className="btn btn-primary mx-2" type="submit">
+        <button className="btn dark-green mx-2" type="submit">
           Submit
         </button>
         <button
           type="button"
           onClick={history.goBack}
-          className="btn btn-secondary"
+          className="btn red-button"
         >
           Cancel
         </button>

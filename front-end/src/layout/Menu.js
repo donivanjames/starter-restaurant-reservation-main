@@ -1,5 +1,5 @@
 import React from "react";
-
+import "../NewLayout.css";
 import { Link } from "react-router-dom";
 
 /**
@@ -16,7 +16,7 @@ function Menu() {
           className="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0"
           to="/"
         >
-          <div className="sidebar-brand-text mx-3">
+          <div className="light-text-replacer mx-3 headers">
             <span>Periodic Tables</span>
           </div>
         </Link>
