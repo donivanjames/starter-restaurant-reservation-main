@@ -22,10 +22,8 @@ DATABASE_URL_PREVIEW=""
 REACT_APP_API_BASE_URL=http://localhost:5001
 3. npm start to run frontend
 
-![image](https://user-images.githubusercontent.com/76602007/198933523-503c27db-a4d0-453c-9dda-ca5c9d100cef.png)
+![image](https://user-images.githubusercontent.com/76602007/199618071-e32cd08a-1640-4518-865f-c6897071fdd9.png)
 
-![image](https://user-images.githubusercontent.com/76602007/198933571-6dc4054f-f51b-42ef-97d7-b0338d74ae10.png)
+![image](https://user-images.githubusercontent.com/76602007/199617971-c8605e8c-61c5-4ead-b766-5f6ae2dda90d.png)
 
-![image](https://user-images.githubusercontent.com/76602007/198933645-86abc3ba-1906-40cf-9e09-b6208378e867.png)
-
-![image](https://user-images.githubusercontent.com/76602007/198933687-4f4af5d9-0844-4b42-ad41-55106dba979f.png)
+![image](https://user-images.githubusercontent.com/76602007/199618019-e34276f2-9cc3-4b9e-ba09-d270803b11b2.png)
