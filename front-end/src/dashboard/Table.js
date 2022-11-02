@@ -13,7 +13,7 @@ function Table({ table, loadDashboard }) {
   }
 
   return (
-    <div className="card mb-3 dark-green shadow-sm">
+    <div className="card mb-3 dark-green shadow-sm w-50">
       <h5 className="card-header dark-green">Table Name: {table.table_name}</h5>
       <div className="card-body new-card-body">
         <div className="container">
@@ -24,7 +24,7 @@ function Table({ table, loadDashboard }) {
                 data-table-id-finish={table.table_id}
                 onClick={clickHandler}
                 role="button"
-                className="col btn green-button rounded justify-content-center align-self-center"
+                className="col btn green-button rounded mr-2"
               >
                 <h5 className="text-center mb-1">
                   Finish
@@ -39,7 +39,7 @@ function Table({ table, loadDashboard }) {
             {table.reservation_id ? (
               <>
                 <div
-                  className="col btn red-button rounded justify-content-center align-self-center"
+                  className="col btn mr-2 red-button rounded"
                   data-table-id-status={table.table_id}
                   style={{ cursor: "default" }}
                 >
@@ -48,7 +48,7 @@ function Table({ table, loadDashboard }) {
               </>
             ) : (
               <div
-                className="col btn rounded green-button justify-content-center align-self-center"
+                className="col btn mr-2 rounded green-button"
                 data-table-id-status={table.table_id}
                 style={{ cursor: "default" }}
               >
@@ -58,18 +58,6 @@ function Table({ table, loadDashboard }) {
           </div>
         </div>
       </div>
-      {/* {table.reservation_id ? (
-        <div
-          data-table-id-finish={table.table_id}
-          onClick={clickHandler}
-          role="button"
-          className="card-footer green-button text-decoration-none"
-        >
-          <h5 className="text-center text-decoration-none mb-1">
-            Finish
-          </h5>
-        </div>
-      ) : null} */}
     </div>
   );
 }
