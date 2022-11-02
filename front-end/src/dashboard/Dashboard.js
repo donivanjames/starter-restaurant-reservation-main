@@ -47,23 +47,19 @@ function Dashboard({ date }) {
 
   return (
     <main>
-      <div className="text-center mt-3 mb-5">
-        <h1>Dashboard</h1>
+        <div className="headers">Dashboard</div>
         <DateNavigation date={date} />
-      </div>
       <ErrorAlert error={reservationsError} />
       <ErrorAlert error={tablesError} />
-      <div className="container">
         <div className="row">
           <div className="col col-sm">
-            <h4 className="mb-4 text-center">Reservations for: {date}</h4>
+            <h4 className="mb-4">Reservations for: {date}</h4>
             {reservationList}
           </div>
           <div className="col col-sm">
-            <h4 className="mb-4 text-center">Tables:</h4>
+            <h4 className="mb-4">Tables:</h4>
             {tableList}
           </div>
-        </div>
       </div>
     </main>
   );

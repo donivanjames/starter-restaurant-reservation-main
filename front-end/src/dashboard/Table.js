@@ -1,4 +1,5 @@
 import { unseatTable } from "../utils/api";
+import "../NewLayout.css";
 
 function Table({ table, loadDashboard }) {
   function clickHandler() {
@@ -11,22 +12,34 @@ function Table({ table, loadDashboard }) {
     }
   }
 
-
   return (
-    <div
-      className="card mb-3 shadow-sm"
-    >
-      <h5 className="card-header">Table Name: {table.table_name}</h5>
-      <div className="card-body">
+    <div className="card mb-3 dark-green shadow-sm">
+      <h5 className="card-header dark-green">Table Name: {table.table_name}</h5>
+      <div className="card-body new-card-body">
         <div className="container">
           <div className="row d-flex">
-            <h5 className="col card-title mb-0 justify-content-center align-self-center">
-              Capacity: {table.capacity}
-            </h5>
+
+            {table.reservation_id ? (
+              <div
+                data-table-id-finish={table.table_id}
+                onClick={clickHandler}
+                role="button"
+                className="col btn green-button rounded justify-content-center align-self-center"
+              >
+                <h5 className="text-center mb-1">
+                  Finish
+                </h5>
+              </div>
+            ) : (
+              <h5 className="col card-title mb-0 justify-content-center align-self-center">
+                Capacity: {table.capacity}
+              </h5>
+            )}
+
             {table.reservation_id ? (
               <>
                 <div
-                  className="col btn border border-warning rounded text-warning"
+                  className="col btn red-button rounded justify-content-center align-self-center"
                   data-table-id-status={table.table_id}
                   style={{ cursor: "default" }}
                 >
@@ -35,7 +48,7 @@ function Table({ table, loadDashboard }) {
               </>
             ) : (
               <div
-                className="col btn border border-success rounded text-success"
+                className="col btn rounded green-button justify-content-center align-self-center"
                 data-table-id-status={table.table_id}
                 style={{ cursor: "default" }}
               >
@@ -45,18 +58,18 @@ function Table({ table, loadDashboard }) {
           </div>
         </div>
       </div>
-      {table.reservation_id ? (
+      {/* {table.reservation_id ? (
         <div
           data-table-id-finish={table.table_id}
           onClick={clickHandler}
           role="button"
-          className="card-footer bg-primary text-decoration-none"
+          className="card-footer green-button text-decoration-none"
         >
-          <h5 className="text-white text-center text-decoration-none mb-1">
+          <h5 className="text-center text-decoration-none mb-1">
             Finish
           </h5>
         </div>
-      ) : null}
+      ) : null} */}
     </div>
   );
 }

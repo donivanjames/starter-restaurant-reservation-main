@@ -79,7 +79,7 @@ function NewTable() {
               placeholder="Table Name"
               onChange={handleChange}
               value={formData.table_name}
-              className="form-control shadow-sm"
+              className="form-control shadow-sm text-field select"
               name="table_name"
             ></input>
           </div>
@@ -94,17 +94,17 @@ function NewTable() {
               min="1"
               onChange={handleChange}
               value={formData.capacity}
-              className="form-control shadow-sm"
+              className="form-control shadow-sm text-field"
               name="capacity"
             ></input>
           </div>
-          <button className="btn btn-primary mx-2" type="submit">
+          <button className="btn dark-green mx-2" type="submit">
             Submit
           </button>
           <button
             onClick={history.goBack}
             type="button"
-            className="btn btn-secondary"
+            className="btn red-button"
           >
             Cancel
           </button>

@@ -1,8 +1,17 @@
 .side-bar {
-  background-color: #393a44;
   min-width: 200px;
+  background-color: #4A5759;
 }
 
 .full-page {
   height: 100vh;
+}
+
+.dark-green {
+  background-color: #4A5759;
+  color: #DEDBD2;
+}
+
+.new-background {
+  background-color: #DEDBD2;
 }
